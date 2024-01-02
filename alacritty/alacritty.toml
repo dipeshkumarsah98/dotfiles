@@ -60,8 +60,27 @@ style= "Bold Italic"
 
   # Point size
 
+[mouse]
+hide_when_typing = true
+bindings = [ { mouse = "Right", action = "PasteSelection" }, { mouse = "Back", chars = "abc" } ]
+
+[scrolling]
+history=1000
+multiplier=5
+# faux_multiplier=5
+
 [shell]
 program= "/usr/bin/tmux"
+
+[[keyboard.bindings]]
+action = "ScrollLineUp"
+key = "PageUp"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "PageUp"
+mods = "Shift"
 
 [[keyboard.bindings]]
 action = "SpawnNewInstance"
@@ -97,13 +116,3 @@ mods = "Control|Shift"
 action = "IncreaseFontSize"
 key = "Equals"
 mods = "Control"
-
-
-  # - { key: W,        mods: Command,       chars: "\x02&"                       }  # close tab (kill)
-  # - { key: T,        mods: Command,       chars: "\x02c"                       }  # new tab
-  # - { key: RBracket, mods: Command|Shift, chars: "\x02n"                       }  # select next tab
-  # - { key: LBracket, mods: Command|Shift, chars: "\x02p"                       }  # select previous tab
-  # - { key: RBracket, mods: Command,       chars: "\x02o"                       }  # select next pane
-  # - { key: LBracket, mods: Command,       chars: "\x02;"                       }  # select last (previously used) pane
-  # - { key: F,        mods: Command,       chars: "\x02/"                       }  # search (upwards) (see tmux.conf)
-  #
