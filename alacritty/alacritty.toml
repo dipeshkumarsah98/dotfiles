@@ -1,0 +1,109 @@
+live_config_reload = true
+import = [
+  # uncomment the flavour you want below:
+  "~/.config/alacritty/catppuccin-mocha.toml"
+  # "~/.config/alacritty/catppuccin-macchiato.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-latte.toml"
+]
+
+[window]
+opacity=0.8
+blur = true
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding] 
+x=10
+y=10
+
+[env]
+TERM="xterm-256color"
+
+[font]
+size=10
+
+[font.normal]
+family="JetBrainsMono Nerd Font"
+    # The `style` can be specified to pick a specific face.
+style="Medium"
+
+  # Bold font face
+[font.bold]
+    # Font family
+family= "JetBrainsMono Nerd Font"
+    # The `style` can be specified to pick a specific face.
+style= "Bold"
+
+[font.italic]
+    # Font family
+    #
+    # If the italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    #family: SauceCodePro Nerd Font
+family= "JetBrainsMono Nerd Font"
+   # The `style` can be specified to pick a specific face.
+style= "Italic"
+
+  # Bold italic font face
+[font.bold_italic]
+    # Font family
+    #
+    # If the bold italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    #family: SauceCodePro Nerd Font
+family= "JetBrainsMono Nerd Font"
+    # The `style` can be specified to pick a specific face.
+style= "Bold Italic"
+
+  # Point size
+
+[shell]
+program= "/usr/bin/tmux"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Minus"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+
+  # - { key: W,        mods: Command,       chars: "\x02&"                       }  # close tab (kill)
+  # - { key: T,        mods: Command,       chars: "\x02c"                       }  # new tab
+  # - { key: RBracket, mods: Command|Shift, chars: "\x02n"                       }  # select next tab
+  # - { key: LBracket, mods: Command|Shift, chars: "\x02p"                       }  # select previous tab
+  # - { key: RBracket, mods: Command,       chars: "\x02o"                       }  # select next pane
+  # - { key: LBracket, mods: Command,       chars: "\x02;"                       }  # select last (previously used) pane
+  # - { key: F,        mods: Command,       chars: "\x02/"                       }  # search (upwards) (see tmux.conf)
+  #
