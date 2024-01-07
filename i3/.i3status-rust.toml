@@ -1,0 +1,48 @@
+[icons]
+icons = "awesome6"
+
+[theme]
+theme="solarized-dark"
+
+[[block]]
+block = "custom"
+command = "cat /etc/hostname"
+interval = "once"
+
+[[block]]
+block = "battery"
+interval = 10
+[icons.overrides]
+bat_charging = "|^|"
+
+ 
+[[block]]
+block = "sound"
+format = "{output_description} {volume}"
+
+[[block]]
+block = "cpu"
+icons_format = "{icon}"
+format="{utilization1},{utilization2}"
+interval=10
+[block.theme_overrides]
+idle_bg = "#123456"
+idle_fg = "#abcdef"
+[block.icons_overrides]
+cpu_boost_off = "OFF"
+cpu_boost_on = "ON"
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %d/%m %R"
+
+[[block]]
+command = "echo '{\"icon\":\"memory_mem\",\"state\":\"Idle\", \"text\": \"cpu\"}'"
+block = "custom"
+json = true
+
+[[block]]
+block = "custom"
+command = "echo '{\"icon\":\"time\",\"state\":\"Idle\", \"text\": \"Fri 19/05 18:22\"}'"
+json = true
