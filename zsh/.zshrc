@@ -18,6 +18,11 @@ alias c="clear"
 export PATH=$PATH:$HOME/bin
 export EDITOR='nvim'
 
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
+
 
 export TERM="xterm-256color"
 
@@ -73,7 +78,11 @@ source /usr/share/nvm/init-nvm.sh
 
 eval "$(zoxide init zsh)"
 
-plugins=(zsh-autosuggestions)
+plugins=(get,zsh-autosuggestions)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+PATH=~/.console-ninja/.bin:$PATH
+export PATH=$HOME/.config/rofi/scripts:$PATH
+
